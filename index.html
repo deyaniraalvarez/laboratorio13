@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Laboratorio 13 - Calculadora</title>
+</head>
+<body>
+  <h1>Laboratorio 13 - Calculadora</h1>
+  <p>Abre la consola o haz clic en el botón para ejecutar la calculadora con prompts.</p>
+
+  <button id="runBtn">Ejecutar calculadora (prompt)</button>
+
+  <script src="calculator.js"></script>
+  <script>
+    document.getElementById("runBtn").addEventListener("click", () => {
+      if (typeof ejecutarConPrompts === "function") {
+        ejecutarConPrompts();
+      } else {
+        alert("No se encontró la función ejecutarConPrompts.");
+      }
+    });
+  </script>
+</body>
+</html>
